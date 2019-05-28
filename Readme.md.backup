@@ -304,3 +304,51 @@ CMD ["sh", "start.sh"]
 
 ## Modification du docker-compose
 
+```
+version: '3'
+
+services:
+  db:
+    container_name: db
+    image: postgres
+    volumes:
+      - ./db-data:/var/lib/postgresql/10/docker_db
+    networks:
+      - main
+
+  backend:
+    container_name: backend
+    build: ./backend
+    command: /start.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    networks:
+      - main  
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend:/app/frontend:ro
+      - '/app/node_modules'
+    ports:
+      - "8080:8080"
+    networks:
+      - main
+    depends_on:
+      - backend
+      - db
+    environment:
+      - NODE_ENV=development
+
+
+networks:
+  main:
+    driver: bridge
+    
+```
+

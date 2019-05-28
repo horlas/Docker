@@ -174,6 +174,7 @@ services:
 
 
 ```
+
 ## Lancement des containers:
 
 ```
@@ -226,6 +227,8 @@ Nous sommes dans le container
 
 Après vue create  choisir les données suivantes
 
+   
+```
     Create the project in the current folder? Y
     Please pick a preset: Manually select features
     Check the features needed for your project: (select all except for TypeScript)
@@ -246,7 +249,11 @@ Après vue create  choisir les données suivantes
     Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? In package.json
     Save this as a preset for future projects? N
     Pick the package manager to use whne installing dependencies: Use NPM
-```
+    
+    
+```    
+   
+
 
 * changer les droits 
 
