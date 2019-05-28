@@ -1,0 +1,4 @@
+https://vuehero.com/courses/getting-started-with-vuejs/part-one/
+https://ahackersday.com/blog/is-django-and-vue-js-a-good-combination/
+
+https://verbose-equals-true.tk/docs/guide/project-setup/#docker-compose
