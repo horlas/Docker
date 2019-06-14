@@ -359,3 +359,18 @@ networks:
     
 ```
 
+
+## Création d'un super-utilisateur via Docker
+
+`docker exec -it backend python3 backend/manage.py createsuperuser`
+
+## Création d'une app Django via Docker
+
+A la racine du projet
+
+`docker exec -it backend python3 backend/manage.py startapp myapp`
+
+`sudo chown -R $USER:$USER .`
+
+`mv myapp backend/`
+`
